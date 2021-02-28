@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS SCALE</title>
+	<style>
+		body
+		{
+			/*background-color:black;*/
+		}
+		div
+		{
+			border:3px solid black;
+			width:300px;
+			height:200px;
+			box-shadow:0 0 10px black;
+			margin:100px auto;
+			border-radius:20px;
+			overflow:hidden;
+			position:relative;
+		}
+		div img
+		{
+			width:inherit;
+			height:inherit;
+			border-radius:inherit;
+			filter:grayscale(100%);
+
+			transition:all 2s;
+		}
+		div:hover img
+		{
+			transform:scale(1.5,1.5);
+			filter:grayscale(0%);
+		}
+		div #wrapper
+		{
+			background-color:rgba(0,0,0,0.5);
+			position:absolute;
+			top:-100px;
+			left:0px;
+			transition:all 3s;
+
+		}
+		div:hover #wrapper
+		{
+			transform:translateY(-100%);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="bike1.jpg">
+		<div id="wrapper"></div>
+	</div>
+</body>
+</html>
